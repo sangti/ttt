@@ -1,1 +1,30 @@
-asdsdasdads
+#include<stdio.h>
+int main()
+{
+	int m,n;
+	int target=0;
+	int a1,a2,a3;
+	a1=a2=a3=0;
+	printf("输入m，n其中m>=1,n<=1000   ");
+	scanf("%d%d",&m,&n);
+	if(m<1&&n>1000)
+	  {
+	  printf("输入超出范围，请重新输入");
+	  scanf("%d%d",&m,&n); 
+      }
+      else
+      {
+	  
+	for(;m<=n;m++)
+	{
+		target=m;
+		a1=target%10;
+		target=target/10;
+		a2=target%10;
+		target=target/10;
+		a3=target%10;
+		if(a1*a1*a1+a2*a2*a2+a3*a3*a3==m)
+		  printf("%d   ",m);
+	}
+  }
+  } 
